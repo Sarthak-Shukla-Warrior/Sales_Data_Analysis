@@ -1,146 +1,55 @@
-# Sales_Data_Analysis
-“Sales Data Analysis project using Python  Libraries(NumPy, Pandas, Matplotlib, Seaborn)”
+# 📊 Business Sales Analysis (Python)
 
+Sales data analysis using **pandas, NumPy, Matplotlib and Seaborn**: data cleaning, business questions, monthly trends and charts.
 
-## 📌 Overview
-This project explores a sales dataset to generate meaningful business insights.  
-The workflow covers data cleaning, analysis, visualization, and insights extraction.
+**Dataset:** 72 transactions · 7 product categories · Jan to Dec 2024 (`data/sales.csv`)
 
-## 🛠 Libraries Used
-- NumPy → numerical operations  
-- Pandas → data cleaning & manipulation  
-- Matplotlib → custom plots  
-- Seaborn → advanced visualizations  
+## 🔑 Key Findings
+| Metric | Result |
+|--------|--------|
+| Total revenue | **641,250** (8,432 units sold) |
+| Average sale | 8,906.25 |
+| Top category by revenue | **Cereal** (203,200), then Beverages (171,550) |
+| Top category by units | **Cereal** (2,765 units) |
+| Weakest category | Fruits (27,550 revenue) |
+| Best month | **December** (70,700) |
+| Worst month | **February** (35,500) |
+| Biggest monthly jump | March (+35.9%), November (+30.1%) |
 
-## 🔍 Steps
-1. **Data Cleaning** → handled missing values, removed duplicates, converted dates  
-2. **Analysis** → explored transactions, categories, revenue, and product performance  
-3. **Visualization** → created line plots, bar charts, and heatmaps  
-4. **Insights** → identified best-selling products, monthly growth, and revenue trends  
+- Cereal and Beverages together make up about **58%** of all revenue.
+- Sales trend upward through the year and peak in **Nov-Dec**.
+- Fruits and Vegetables bring the lowest revenue per sale; Household and Personal Care sell few units but each unit earns far more (about 169 and 124 revenue per unit vs about 59 for Fruits).
 
-## 📂 Dataset
-Dataset is available in `sales_dataset.pdf` for reference.
+## 📈 Charts
 
-## 📊 Results
-- Best-selling product categories  
-- Monthly revenue trends (best & worst months)  
-- Category-wise performance comparison  
-- Heatmap showing revenue distribution across months  
+### Monthly Sales Trend
+![Monthly Sales Trend](outputs/1_monthly_sales_trend.png)
 
-## 🚀 Learning Outcome
-This project helped me strengthen my skills in Python (NumPy, Pandas, Matplotlib, Seaborn) and taught me how to convert raw data into meaningful business insights.
+### Total Sales by Category
+![Sales by Category](outputs/2_sales_by_category.png)
 
+### Units Sold by Product
+![Units Sold](outputs/3_units_sold_by_product.png)
 
+### Monthly Revenue Heatmap
+![Heatmap](outputs/4_monthly_revenue_heatmap.png)
 
+Full console output is in [`outputs/analysis_output.txt`](outputs/analysis_output.txt) and the category table in [`outputs/summary_table.csv`](outputs/summary_table.csv).
 
-## 🔍 Workflow
-1. Data Cleaning
-2. Analysis
-3. Visualization
-4. Insights
+## ▶️ How to run
+1. Install libraries: `pip install -r requirements.txt`
+2. Run: `python business_analysis.py`
 
-## 📊 Key Insights
-- Best-selling products
-- Monthly revenue trends
-- Category-wise performance
+The script reads `data/sales.csv` (columns: `Order Date`, `Item Type`, `Units Sold`, `Total Revenue`) and saves the charts into `outputs/`.
 
-## 📂 Dataset
-Dataset is available in `sales_dataset.pdf`.
+## 📁 Project structure
+```
+business-analysis/
+├── business_analysis.py
+├── requirements.txt
+├── data/sales.csv
+└── outputs/        (charts + summary table)
+```
 
-## 🚀 Results
-Visualizations include line plots, bar charts, and heatmaps.
-
-
-
-                    PROJECT ARCHITECTURE
-              Sales Data Analysis using Python
-                            |
-                            |
-                            v
-        +--------------------------------------+
-        |         1. DATA SOURCE LAYER         |
-        +--------------------------------------+
-        | Input: sales.csv                     |
-        |                                      |
-        | - Order Date                         |
-        | - Item Type                          |
-        | - Units Sold                         |
-        | - Total Revenue                      |
-        |                                      |
-        | Format: Raw CSV Dataset              |
-        +--------------------------------------+
-                            |
-                            |
-                            v
-        +--------------------------------------+
-        |        2. DATA CLEANING LAYER        |
-        +--------------------------------------+
-        | Tool: Pandas                         |
-        |                                      |
-        | - Handle missing values              |
-        | - Remove duplicate records           |
-        | - Convert Order Date to datetime     |
-        | - Handle missing category values     |
-        +--------------------------------------+
-                            |
-                            |
-                            v
-        +--------------------------------------+
-        |        3. DATA ANALYSIS LAYER        |
-        +--------------------------------------+
-        | Tools: NumPy + Pandas                |
-        |                                      |
-        | - Calculate total revenue            |
-        | - Calculate average sales            |
-        | - Analyze product-wise sales         |
-        | - Analyze units sold                 |
-        | - Calculate monthly sales growth     |
-        | - Identify best and worst months     |
-        +--------------------------------------+
-                            |
-                            |
-                            v
-        +--------------------------------------+
-        |        4. VISUALIZATION LAYER        |
-        +--------------------------------------+
-        | Tools: Matplotlib + Seaborn          |
-        |                                      |
-        | - Monthly Sales Trend (Line Plot)    |
-        | - Category-wise Sales (Bar Plot)     |
-        | - Units Sold by Product (Bar Plot)   |
-        | - Monthly Revenue (Heatmap)           |
-        +--------------------------------------+
-                            |
-                            |
-                            v
-        +--------------------------------------+
-        |          5. INSIGHTS LAYER           |
-        +--------------------------------------+
-        | - Identify top-selling categories    |
-        | - Find best and worst sales months   |
-        | - Analyze monthly growth trends      |
-        | - Calculate average sale             |
-        | - Understand sales performance       |
-        +--------------------------------------+
-                            |
-                            |
-                            v
-        +--------------------------------------+
-        |        6. PRESENTATION LAYER         |
-        +--------------------------------------+
-        | Deliverables:                        |
-        |                                      |
-        | - Python Source Code (.py)           |
-        | - Sales Dataset (CSV)                |
-        | - Graphs and Visualizations          |
-        | - Project Documentation (PDF)         |
-        | - README.md                          |
-        +--------------------------------------+
-                            |
-                            |
-                            v
-        +--------------------------------------+
-        |            FINAL OUTPUT              |
-        +--------------------------------------+
-        |  Sales Analysis Report and Insights  |
-        +--------------------------------------+
+## Tech
+Python · pandas · NumPy · Matplotlib · Seaborn
